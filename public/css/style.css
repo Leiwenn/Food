@@ -1,0 +1,164 @@
+/* FONT */
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../font/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../font/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+container-fluid{
+    font-family: 'montserratbold';
+}
+/* COLOR */
+:root{
+    --the-orange: rgb(254, 144, 0);
+    --the-text: rgb(255, 255, 255);
+    --the-background: #222228;
+}
+
+body{
+    background: var(--the-background);
+}
+.container-fluid{
+    color: var(--the-text);
+}
+
+.nav-link, .navLink{
+    color: var(--the-text);
+}
+.nav-link:hover, .navLink:hover, h1, .card-title, .price{
+    color: var(--the-orange);
+}
+.navLink:hover{
+    text-decoration: none;
+}
+
+.btn{
+    background: var(--the-orange);
+    color: var(--the-background);
+    width: 10rem;
+}
+
+.myborder{
+    border: 10px solid var(--the-orange);
+    background: rgba(34, 34, 40, 0.9);
+}
+
+.menu .card{
+    border: none;
+    background: transparent;
+    border-radius: 0 !important;
+}
+.menu .card img{
+    border-radius: 0 !important;
+}
+
+.meal{
+    background: var(--the-orange);
+    color: var(--the-text);
+}
+
+/* IMG */
+header{
+    background: url(../img/header.png);
+    background-size: cover;
+}
+
+.quality{
+    background: url(../img/wave.png);
+    background-size: cover;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 970px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 20px 20px;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+}
+.grid-container > .a {
+  grid-area: a;
+  background: url(../img/gallery1.png);
+}
+.grid-container > .b {
+  grid-area: b;
+  background: url(../img/gallery2.png);
+}
+.grid-container > .c {
+  grid-area: c;
+  background: url(../img/gallery3.png);
+}
+.grid-container > .d {
+  grid-area: d;
+  background: url(../img/gallery4.png);
+}
+.grid-container > .e {
+  grid-area: e;
+  background: url(../img/gallery5.png);
+}
+.grid-container > .f {
+  grid-area: f;
+  background: url(../img/gallery6.png);
+}
+.grid-container img{
+    width: 100%;
+    height: auto;
+}
+
+.enjoy{
+    background: url(../img/enjoy.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.meal img{
+    position: absolute;
+    top: -60px;
+}
+
+/* layout */
+body, .container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    overflow: hidden;
+}
+
+header{
+    height: 100vh;
+}
+
+section{
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.quality{
+    height: 1700px;
+}
+.quality div{
+    margin-top: 25rem;
+    margin-left: 10rem;
+}
+
+.enjoy{
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meal{
+    position: relative;
+    height: 500px;
+}
+
+footer div a{
+    margin: 10px;
+}
