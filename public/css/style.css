@@ -1,8 +1,15 @@
 /* FONT */
 @font-face {
     font-family: 'montserratbold';
-    src: url('../font/montserrat-bold-webfont.woff2') format('woff2'),
-         url('../font/montserrat-bold-webfont.woff') format('woff');
+    src: url('../font/montserrat-bold-webfont.woff') format('woff2'),
+         url('../font/montserrat-bold-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'aachenroman';
+    src: url('../font/911fonts.com_aachenroman__-_911fonts.com_fonts_fwfy-webfont.woff2') format('woff2'),
+         url('../font/911fonts.com_aachenroman__-_911fonts.com_fonts_fwfy-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +31,7 @@ body{
     color: var(--the-text);
 }
 
-.nav-link, .navLink{
+.nav-link, .navLink, .navbar-toggler-icon{
     color: var(--the-text);
 }
 .nav-link:hover, .navLink:hover, h1, .card-title, .price{
@@ -63,6 +70,10 @@ body{
 header{
     background: url(../img/header.png);
     background-size: cover;
+}
+
+.contact-us img{
+    display: none;
 }
 
 .quality{
@@ -113,7 +124,7 @@ header{
 .enjoy{
     background: url(../img/enjoy.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .meal img{
@@ -127,6 +138,8 @@ body, .container-fluid{
     padding: 0;
 }
 .container-fluid{
+    max-width: 1440px;
+    margin: auto;
     overflow: hidden;
 }
 
@@ -161,4 +174,59 @@ section{
 
 footer div a{
     margin: 10px;
+}
+
+/* media queries */
+
+@media (max-width: 991.98px){
+    header, .quality, .enjoy, .meal{
+        height: auto;
+    }
+    .img-header, .navbar-brand{
+        display: none;
+    }
+    .contact-us{
+        margin: 0 20px;
+        padding-bottom: 20px;
+    }
+    .contact-us img{
+        display: block;
+        width: 200px;
+        margin: 0 auto 40px auto;
+    }
+
+    .about h2{
+        margin-top: 20px;
+    }
+
+    .quality div{
+        margin-left: 0;
+        margin-top: 5rem;
+        background: rgba(34, 34, 40, 0.3);
+    }
+    .grid-container {
+        display: grid;
+        height: 1500px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        gap: 20px 0;
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f";
+    }
+
+    .enjoy, .meal{
+        padding: 50px;
+    }
+
+    .meal img{
+        display: none;
+    }
+    .meal h6, .meal p{
+        z-index: 1;
+    }
 }
